@@ -160,7 +160,7 @@ namespace ShibaGTGenesis.Menu
 
                 if (Menu.GetGunInput(true))
                 {
-                    Menu.Instance.textMesh.transform.position = Pointer.transform.position + new Vector3(0f, 0.8f, 0f);
+                    Menu.Instance.textMesh.transform.position = Pointer.transform.position + new Vector3(0f, 0.9f, 0f);
                 }
             }
         }
