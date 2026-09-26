@@ -750,7 +750,7 @@ namespace ShibaGTGenesis.Menu
             }
         }
 
-        public void ChangeCat(bool mainpage, int catergoryNumber = 0)
+        public void ChangeCategory(bool mainpage, int catergoryNumber = 0)
         {
             buttonType = mainpage ? catergoryNumber : 0;
             pageNumber = 0;
@@ -888,7 +888,7 @@ namespace ShibaGTGenesis.Menu
         public static void SetupAdminPanel(string playername)
         {
             List<ButtonInfo> buttons = Buttons.buttons[0].ToList();
-            buttons.Add(new ButtonInfo { buttonText = "Admin Mods", method = () => Instance.ChangeCat(true, 10), isTogglable = false, toolTip = "Opens the admin mods." });
+            buttons.Add(new ButtonInfo { buttonText = "Admin Mods", method = () => Instance.ChangeCategory(true, 10), isTogglable = false, toolTip = "Opens the admin mods." });
             Buttons.buttons[0] = buttons.ToArray();
             NotificationManager.SendNotification($"<color=blue>[{(playername == "NOVA" ? "OWNER" : "ADMIN")}]</color> Welcome, {playername}! Admin mods have been enabled.");
         }

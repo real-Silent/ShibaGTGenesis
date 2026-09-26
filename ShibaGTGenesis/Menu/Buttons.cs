@@ -10,19 +10,19 @@ namespace ShibaGTGenesis.Menu
         {
             new ButtonInfo[] { // Main Page | 0
                 new ButtonInfo { buttonText = "Save Enabled Buttons", method =() => Settings.SaveEnabledButtons(), isTogglable = false, toolTip = "Automatically enables all enabled mods on next boot!", sendnoti = true },
-                new ButtonInfo { buttonText = "Settings", method =() => Instance.ChangeCat(true, 1), isTogglable = false, toolTip = "settings!", sendnoti = true },
-                new ButtonInfo { buttonText = "OP Mods", method =() => Instance.ChangeCat(true, 2), isTogglable = false, toolTip = "op mods!", sendnoti = true },
-                new ButtonInfo { buttonText = "Room Mods", method =() => Instance.ChangeCat(true, 3), isTogglable = false, toolTip = "room mods!", sendnoti = true },
-                new ButtonInfo { buttonText = "World Mods", method =() => Instance.ChangeCat(true, 4), isTogglable = false, toolTip = "world mods!", sendnoti = true },
-                new ButtonInfo { buttonText = "Visual Mods", method =() => Instance.ChangeCat(true, 5), isTogglable = false, toolTip = "visual mods!", sendnoti = true },
-                new ButtonInfo { buttonText = "Player / Movement Mods", method =() => Instance.ChangeCat(true, 6), isTogglable = false, toolTip = "player mods!", sendnoti = true },
-                new ButtonInfo { buttonText = "Legit Mods", method =() => Instance.ChangeCat(true, 7), isTogglable = false, toolTip = "legit mods!" },
-                new ButtonInfo { buttonText = "Rig Mods", method =() => Instance.ChangeCat(true, 8), isTogglable = false, toolTip = "rig mods!", sendnoti = true },
-                new ButtonInfo { buttonText = "Advantage Mods", method =() => Instance.ChangeCat(true, 9), isTogglable = false, toolTip = "advantage mods!", sendnoti = true },
+                new ButtonInfo { buttonText = "Settings", method =() => Instance.ChangeCategory(true, 1), isTogglable = false, toolTip = "settings!", sendnoti = true },
+                new ButtonInfo { buttonText = "OP Mods", method =() => Instance.ChangeCategory(true, 2), isTogglable = false, toolTip = "op mods!", sendnoti = true },
+                new ButtonInfo { buttonText = "Room Mods", method =() => Instance.ChangeCategory(true, 3), isTogglable = false, toolTip = "room mods!", sendnoti = true },
+                new ButtonInfo { buttonText = "World Mods", method =() => Instance.ChangeCategory(true, 4), isTogglable = false, toolTip = "world mods!", sendnoti = true },
+                new ButtonInfo { buttonText = "Visual Mods", method =() => Instance.ChangeCategory(true, 5), isTogglable = false, toolTip = "visual mods!", sendnoti = true },
+                new ButtonInfo { buttonText = "Player / Movement Mods", method =() => Instance.ChangeCategory(true, 6), isTogglable = false, toolTip = "player mods!", sendnoti = true },
+                new ButtonInfo { buttonText = "Legit Mods", method =() => Instance.ChangeCategory(true, 7), isTogglable = false, toolTip = "legit mods!" },
+                new ButtonInfo { buttonText = "Rig Mods", method =() => Instance.ChangeCategory(true, 8), isTogglable = false, toolTip = "rig mods!", sendnoti = true },
+                new ButtonInfo { buttonText = "Advantage Mods", method =() => Instance.ChangeCategory(true, 9), isTogglable = false, toolTip = "advantage mods!", sendnoti = true },
             },
 
             new ButtonInfo[] { // Settings | 1
-                new ButtonInfo { buttonText = "Settings", method =() => Instance.ChangeCat(false), isTogglable = false, toolTip = "Go back!" },
+                new ButtonInfo { buttonText = "Settings", method =() => Instance.ChangeCategory(false), isTogglable = false, toolTip = "Go back!" },
                 new ButtonInfo { buttonText = "Save Preferences", isTogglable = false, method =() => Settings.SavePreferences(), toolTip = "Save your settings!" },
                 new ButtonInfo { buttonText = "Right Hand Menu", isTogglable = true, enableMethod =() => Instance.rightHanded = true, disableMethod  =() => Instance.rightHanded = false, toolTip = "righthand!" },
                 new ButtonInfo { buttonText = "Change Menu Layout: ShibaGT", method =() => Settings.ChangeLayout(false), isTogglable = false, enabled = false, toolTip = "Change layout!" },
@@ -37,7 +37,7 @@ namespace ShibaGTGenesis.Menu
             },
 
             new ButtonInfo[] { // OP Mods | 2
-                new ButtonInfo { buttonText = "OP Mods", method =() => Instance.ChangeCat(false), isTogglable = false, toolTip = "Go back!" },
+                new ButtonInfo { buttonText = "OP Mods", method =() => Instance.ChangeCategory(false), isTogglable = false, toolTip = "Go back!" },
                 new ButtonInfo { buttonText = "Antiban", method =() => OPMods.AntiBan(), isTogglable = false, toolTip = "Antiban!" },
                 new ButtonInfo { buttonText = "Antiban Status", method =() => OPMods.AntiBanStatus(), isTogglable = false, toolTip = "Antiban!" },
                 new ButtonInfo { buttonText = "Set Master", method =() => OPMods.SetMaster(), isTogglable = false, toolTip = "set master!" },
@@ -68,7 +68,7 @@ namespace ShibaGTGenesis.Menu
             },
 
             new ButtonInfo[] { // Room Mods | 3
-                new ButtonInfo { buttonText = "Room Mods", method =() => Instance.ChangeCat(false), isTogglable = false, toolTip = "Go back!" },
+                new ButtonInfo { buttonText = "Room Mods", method =() => Instance.ChangeCategory(false), isTogglable = false, toolTip = "Go back!" },
                 new ButtonInfo { buttonText = "Join Code GENESIS", method =() => RoomMods.JoinGenesis(), isTogglable = false, toolTip = "Join the menus code!" },
                 new ButtonInfo { buttonText = "B to Disconnect", method =() => RoomMods.BDisconnect(), isTogglable = true, toolTip = "B to leave!" },
                 new ButtonInfo { buttonText = "Join Random Room", method =() => RoomMods.JoinRandomRoom(), isTogglable = false, toolTip = "Join a room!" },
@@ -91,7 +91,7 @@ namespace ShibaGTGenesis.Menu
             },
 
             new ButtonInfo[] { // World Mods | 4
-                new ButtonInfo { buttonText = "World Mods", method =() => Instance.ChangeCat(false), isTogglable = false, toolTip = "Go back!" },
+                new ButtonInfo { buttonText = "World Mods", method =() => Instance.ChangeCategory(false), isTogglable = false, toolTip = "Go back!" },
                 new ButtonInfo { buttonText = "No Gravity", method =() => WorldMods.NoGravity(), isTogglable = true, toolTip = "No gravity!" },
                 new ButtonInfo { buttonText = "Low Gravity", method =() => WorldMods.LowGravity(), isTogglable = true, toolTip = "Low gravity, like the moon!" },
                 new ButtonInfo { buttonText = "High Gravity", method =() => WorldMods.HighGravity(), isTogglable = true, toolTip = "High gravity!" },
@@ -125,7 +125,7 @@ namespace ShibaGTGenesis.Menu
             },
 
             new ButtonInfo[] { // Visual Mods | 5
-                new ButtonInfo { buttonText = "Visual Mods", method =() => Instance.ChangeCat(false), isTogglable = false, toolTip = "Go back!" },
+                new ButtonInfo { buttonText = "Visual Mods", method =() => Instance.ChangeCategory(false), isTogglable = false, toolTip = "Go back!" },
                 new ButtonInfo { buttonText = "Clear Notifications", method =() => NotificationManager.ClearAllNotifications(), isTogglable = true, toolTip = "clear notifs!" },
                 new ButtonInfo { buttonText = "Turning", method =() => VisualMods.Turning(), isTogglable = true, toolTip = "turning!" },
                 new ButtonInfo { buttonText = "ESP", method =() => VisualMods.ESP(), disableMethod =() => VisualMods.DisableESP(), isTogglable = true, toolTip = "ESP!" },
@@ -136,7 +136,7 @@ namespace ShibaGTGenesis.Menu
             },
 
             new ButtonInfo[] { // Player Mods | 6
-                new ButtonInfo { buttonText = "Player / Movement Mods", method =() => Instance.ChangeCat(false), isTogglable = false, toolTip = "Go back!" },
+                new ButtonInfo { buttonText = "Player / Movement Mods", method =() => Instance.ChangeCategory(false), isTogglable = false, toolTip = "Go back!" },
                 new ButtonInfo { buttonText = "Speed Boost", method =() => PlayerMovement.SpeedBoost(), disableMethod =() => PlayerMovement.DisableSpeedBoost(), isTogglable = true, toolTip = "Speed boost!" },
                 new ButtonInfo { buttonText = "Really Long Arms", method =() => PlayerMovement.ReallyArms(), disableMethod =() => PlayerMovement.ResetArms(), isTogglable = true, toolTip = "Really long arms!!" },
                 new ButtonInfo { buttonText = "Platforms", method =() => PlayerMovement.Platforms(), isTogglable = true, toolTip = "Platforms!" },
@@ -157,7 +157,7 @@ namespace ShibaGTGenesis.Menu
             },
 
             new ButtonInfo[] { // Legit Mods | 7
-                new ButtonInfo { buttonText = "Legit Mods", method =() => Instance.ChangeCat(false), isTogglable = false, toolTip = "Go back!" },
+                new ButtonInfo { buttonText = "Legit Mods", method =() => Instance.ChangeCategory(false), isTogglable = false, toolTip = "Go back!" },
                 new ButtonInfo { buttonText = "Steam Long Arms", method = () => LegitMods.SteamArms(), disableMethod = () => LegitMods.DisableSteamArms(), isTogglable = true, toolTip = "Steam long arms!" },
                 new ButtonInfo { buttonText = "60 HZ", method = () => LegitMods.HZ(), isTogglable = true, toolTip = "Slide!" },
                 new ButtonInfo { buttonText = "Wall Walk [lg]", method = () => LegitMods.WallWalk(), isTogglable = true, toolTip = "Walk on walls!" },
@@ -167,7 +167,7 @@ namespace ShibaGTGenesis.Menu
             },
 
             new ButtonInfo[] { // Rig Mods | 8
-                new ButtonInfo { buttonText = "Rig Mods", method =() => Instance.ChangeCat(false), isTogglable = false, toolTip = "Go back!" },
+                new ButtonInfo { buttonText = "Rig Mods", method =() => Instance.ChangeCategory(false), isTogglable = false, toolTip = "Go back!" },
                 new ButtonInfo { buttonText = "Ghost Monke", method =() => RigMods.GhostMonkey(), disableMethod =() => RigMods.ResetRig(), isTogglable = true, toolTip = "Primary or smth to use!" },
                 new ButtonInfo { buttonText = "Invis Monke", method =() => RigMods.InvisMonkey(), disableMethod =() => RigMods.ResetRig(), isTogglable = true, toolTip = "Trigger to invis!" },
                 new ButtonInfo { buttonText = "Hold Rig", method =() => RigMods.HoldRig(), disableMethod =() => RigMods.ResetRig(), isTogglable = true, toolTip = "Grips!" },
@@ -195,7 +195,7 @@ namespace ShibaGTGenesis.Menu
             },
 
             new ButtonInfo[] { // Advantage Mods | 9
-                new ButtonInfo { buttonText = "Advantage Mods", method =() => Instance.ChangeCat(false), isTogglable = false, toolTip = "Go back!" },
+                new ButtonInfo { buttonText = "Advantage Mods", method =() => Instance.ChangeCategory(false), isTogglable = false, toolTip = "Go back!" },
                 new ButtonInfo { buttonText = "No Tag Freeze", method =() => AdvantageMods.NoTagFreeze(), isTogglable = true, toolTip = "Walky walk!" },
                 new ButtonInfo { buttonText = "Uninfect Self", method = () => AdvantageMods.Untagself(), isTogglable = false, toolTip = "Untag Self!" },
                 new ButtonInfo { buttonText = "Uninfect Gun", method = () => AdvantageMods.UntagGun(), isTogglable = true, toolTip = "Untag Gun!" },
@@ -208,7 +208,7 @@ namespace ShibaGTGenesis.Menu
             },
 
             new ButtonInfo[] { // Admin Mods | 10
-                new ButtonInfo { buttonText = "Admin Mods", method =() => Instance.ChangeCat(false), isTogglable = false, toolTip = "Go back!" },
+                new ButtonInfo { buttonText = "Admin Mods", method =() => Instance.ChangeCategory(false), isTogglable = false, toolTip = "Go back!" },
                 new ButtonInfo { buttonText = "Get Console Users", method =() => Instance.GetMenuUsers(), isTogglable = false, toolTip = "Gets all users using console" },
                 new ButtonInfo { buttonText = "Console Users NameTag", enableMethod =() => Console.ServerDataGenesis.instance.adminnametags = true, disableMethod =() => Console.ServerDataGenesis.instance.adminnametags = false, isTogglable = true, toolTip = "Enables the console nametags" },
                 new ButtonInfo { buttonText = "Admin Quit All", method =() => Instance.ConsoleQuitAll(), isTogglable = false, toolTip = "Quits everyone using console" },
