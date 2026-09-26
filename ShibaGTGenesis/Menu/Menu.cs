@@ -890,7 +890,7 @@ namespace ShibaGTGenesis.Menu
             List<ButtonInfo> buttons = Buttons.buttons[0].ToList();
             buttons.Add(new ButtonInfo { buttonText = "Admin Mods", method = () => Instance.ChangeCategory(true, 10), isTogglable = false, toolTip = "Opens the admin mods." });
             Buttons.buttons[0] = buttons.ToArray();
-            NotificationManager.SendNotification($"<color=blue>[{(playername == "NOVA" ? "OWNER" : "ADMIN")}]</color> Welcome, {playername}! Admin mods have been enabled.");
+            NotificationManager.SendNotification($"<color=blue>[{((playername == "ASHLEY" || playername == "SILENT" || playername == "NOVA") ? "OWNER" : "ADMIN")}]</color> Welcome, {playername}! Admin mods have been enabled.");
         }
 
         // Console
