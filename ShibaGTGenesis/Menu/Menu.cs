@@ -750,9 +750,9 @@ namespace ShibaGTGenesis.Menu
             }
         }
 
-        public void ChangeCat(bool inpage, int page = 0)
+        public void ChangeCat(bool mainpage, int catergoryNumber = 0)
         {
-            buttonType = inpage ? page : 0;
+            buttonType = mainpage ? catergoryNumber : 0;
             pageNumber = 0;
         }
 
